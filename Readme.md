@@ -1,34 +1,4 @@
-############## data flow diagram ###########
-
-User Query
-   |
-Query Builder
-   |
-Fetcher (NewsAPI / RSS / Scraper)
-   |
-Article Parser (newspaper3k)
-   |
-Normalizer & Clean Text
-   |
-NLP Extraction (spaCy / dateparser)
-   |
-Candidate Pool (sentences with dates / keywords)
-   |
-Embeddings (sentence-transformers)
-   |
-Clustering (Agglomerative)
-   |
-Cluster Aggregator -> canonical date selection
-   |
-LLM Prompt Builder -> LLM (GPT) -> Milestone JSON
-   |
-Timeline Assembler (sort & merge)
-   |
-Veracity & Credibility Scorer
-   |
-Storage (DB / Cache)
-   |
-UI (Streamlit) + Charts & Export
+#
 
 
 
