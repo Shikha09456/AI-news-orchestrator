@@ -11,3 +11,7 @@ pandas
 tqdm
 python-dateutil
 matplotlib
+lxml_html_clean
+lxml
+beautifulsoup4
+
