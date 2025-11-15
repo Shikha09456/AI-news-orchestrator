@@ -1,0 +1,12 @@
+streamlit
+requests
+newspaper3k
+spacy
+dateparser
+sentence-transformers
+scikit-learn
+openai
+numpy
+pandas
+tqdm
+python-dateutil
