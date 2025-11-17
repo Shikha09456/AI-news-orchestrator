@@ -1,7 +1,7 @@
 streamlit
 requests
 newspaper3k
-spacy
+spacy==3.8.9
 dateparser
 sentence-transformers
 scikit-learn
@@ -11,3 +11,7 @@ pandas
 tqdm
 python-dateutil
 matplotlib
+
+https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0-py3-none-any.whl
+
+

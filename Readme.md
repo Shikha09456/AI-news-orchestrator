@@ -6,7 +6,7 @@
 
 Goal
 
-Produce a concise, factual milestone for each cluster, with metadata: canonical date, confidence, supporting sources, and contradiction notes — without hallucination.
+<!-- Produce a concise, factual milestone for each cluster, with metadata: canonical date, confidence, supporting sources, and contradiction notes — without hallucination.
 
 Inputs to the LLM (always only include this):
 
@@ -238,4 +238,4 @@ F) Final assembled timeline (sorted + minimal fields)
     "RandomSite": 1
   }
 }
-
+ -->

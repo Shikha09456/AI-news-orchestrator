@@ -8,7 +8,15 @@ from typing import List, Dict
 from config import EMBEDDING_MODEL
 from tqdm import tqdm
 
-nlp = spacy.load("en_core_web_sm")
+import spacy
+
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    import spacy.cli
+    spacy.cli.download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+
 embed_model = SentenceTransformer(EMBEDDING_MODEL)
 
 def split_sentences(text):
