@@ -1,15 +1,415 @@
-#
+# 📰 AI News Orchestrator
+
+> **An AI-powered News Intelligence Platform that aggregates, analyzes, verifies, and summarizes news from multiple sources using NLP, Semantic Search, and Large Language Models.**
+
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red)
+![OpenAI](https://img.shields.io/badge/LLM-OpenAI-green)
 
 
+---
 
-############## llm workflow #############
+# 📖 Overview
 
-The goal of this project was to:
+Reading news from multiple websites often results in duplicate information, conflicting reports, and information overload.
 
-Collect news automatically.
-Remove duplicate information.
-Summarize long articles.
-Present important updates in one place
+**AI News Orchestrator** solves this problem by automatically collecting news articles, extracting meaningful content, grouping similar stories, generating concise AI-powered summaries, and presenting them through an interactive dashboard.
+
+Instead of reading ten different articles covering the same event, users receive one clean, verified summary.
+
+---
+
+# 🚀 Features
+
+* 📰 Multi-source news aggregation
+* 🤖 AI-powered news summarization
+* 🔍 Semantic similarity detection
+* 📅 Timeline generation
+* 📊 Interactive Streamlit dashboard
+* 🧠 Embedding-based duplicate detection
+* 📌 Source attribution
+* ⚡ Fast article processing
+* 📈 Real-time article comparison
+
+---
+
+# 🏗️ System Architecture
+
+```
+                News Websites
+                       │
+                       ▼
+             Article Extraction
+              (newspaper3k)
+                       │
+                       ▼
+               Text Preprocessing
+                    (spaCy)
+                       │
+                       ▼
+           Sentence Embedding Model
+         (Sentence Transformers)
+                       │
+                       ▼
+          Similarity Detection
+          (Cosine Similarity)
+                       │
+                       ▼
+          AI Summarization (LLM)
+                (OpenAI API)
+                       │
+                       ▼
+          Streamlit Dashboard
+```
+
+---
+
+# 🛠️ Tech Stack
+
+## Programming
+
+* Python
+
+## Frontend
+
+* Streamlit
+
+## NLP
+
+* spaCy
+* newspaper3k
+
+## Machine Learning
+
+* Sentence Transformers
+* Scikit-learn
+
+## LLM
+
+* OpenAI API
+
+## Data Processing
+
+* Pandas
+* NumPy
+
+## Utilities
+
+* dateparser
+* python-dateutil
+* tqdm
+
+---
+
+# 📂 Project Structure
+
+```
+AI-News-Orchestrator/
+
+│
+├── app.py
+├── requirements.txt
+├── config.py
+├── utils/
+│     ├── preprocess.py
+│     ├── embedding.py
+│     ├── summarizer.py
+│     └── similarity.py
+│
+├── data/
+│
+├── models/
+│
+├── assets/
+│
+├── README.md
+│
+└── screenshots/
+```
+
+---
+
+# ⚙️ Workflow
+
+## Step 1
+
+Collect articles from multiple news sources.
+
+↓
+
+## Step 2
+
+Extract article text, title, author, and publication date.
+
+↓
+
+## Step 3
+
+Clean and preprocess text using spaCy.
+
+↓
+
+## Step 4
+
+Generate sentence embeddings.
+
+↓
+
+## Step 5
+
+Compare semantic similarity between articles.
+
+↓
+
+## Step 6
+
+Group duplicate or highly similar news.
+
+↓
+
+## Step 7
+
+Generate concise AI summaries using an LLM.
+
+↓
+
+## Step 8
+
+Display organized news on a Streamlit dashboard.
+
+---
+
+# 🧠 AI Pipeline
+
+```
+Raw Articles
+
+↓
+
+Cleaning
+
+↓
+
+Tokenization
+
+↓
+
+Embeddings
+
+↓
+
+Similarity Search
+
+↓
+
+Duplicate Removal
+
+↓
+
+LLM Summarization
+
+↓
+
+Timeline Generation
+
+↓
+
+Dashboard
+```
+
+---
+
+# 📊 Machine Learning Components
+
+### NLP
+
+* Tokenization
+* Text Cleaning
+* Stop-word Removal
+* Lemmatization
+
+### Embedding Model
+
+Sentence Transformers convert each article into dense vector representations.
+
+### Similarity
+
+Cosine Similarity is used to detect duplicate or semantically similar news.
+
+### LLM
+
+Large Language Models generate concise, context-aware summaries.
+
+---
+
+# 💡 Why Embeddings?
+
+Traditional keyword matching cannot detect semantic similarity.
+
+Example:
+
+Article A
+
+```
+Apple launches its latest iPhone.
+```
+
+Article B
+
+```
+Apple unveils a new smartphone.
+```
+
+Although different words are used, both describe the same event.
+
+Sentence embeddings capture this similarity.
+
+---
+
+# 📈 Dashboard Features
+
+* Latest Headlines
+* AI Summary
+* Publication Date
+* News Timeline
+* Similar Articles
+* Source Information
+* Search
+* Category Filters
+
+---
+
+# 📦 Installation
+
+Clone the repository
+
+```bash
+git clone https://github.com/yourusername/AI-News-Orchestrator.git
+```
+
+Move into the project
+
+```bash
+cd AI-News-Orchestrator
+```
+
+Install dependencies
+
+```bash
+pip install -r requirements.txt
+```
+
+Run the application
+
+```bash
+streamlit run app.py
+```
+
+---
+
+# 📄 Requirements
+
+```
+streamlit
+pandas
+numpy
+requests
+newspaper3k
+spacy
+dateparser
+sentence-transformers
+scikit-learn
+openai
+python-dateutil
+tqdm
+```
+
+---
+
+# 🎯 Challenges Faced
+
+* Handling duplicate news from multiple sources.
+* Dependency issues with `newspaper3k` (`lxml_html_clean`).
+* Missing spaCy language model (`en_core_web_sm`) during deployment.
+* GitHub push failures caused by large demo video files (>100 MB).
+* Managing API rate limits and deployment configuration.
+
+---
+
+# 🚀 Future Enhancements
+
+* Retrieval-Augmented Generation (RAG)
+* Vector database integration (FAISS/Chroma)
+* Multilingual news support
+* Personalized recommendations
+* Fake news detection
+* Sentiment analysis
+* Topic clustering
+* Voice summaries
+* Real-time alerts
+* Mobile-friendly UI
+
+---
+
+# 📚 Skills Demonstrated
+
+* Python
+* NLP
+* Generative AI
+* Large Language Models (LLMs)
+* Semantic Search
+* Machine Learning
+* Streamlit
+* API Integration
+* Data Processing
+* Software Deployment
+
+---
+
+# 📸 Screenshots
+
+Add screenshots of:
+
+* Home Dashboard
+* AI Summary View
+* Timeline
+* Similar News Detection
+* Search Interface
+
+---
+
+# 🤝 Contributing
+
+Contributions are welcome!
+
+1. Fork the repository
+2. Create a feature branch
+3. Commit your changes
+4. Push to your branch
+5. Open a Pull Request
+
+---
+
+
+# 👩‍💻 Author
+
+**Shikha Kumari**
+
+AI & Machine Learning Enthusiast
+
+Interested in:
+
+* Machine Learning
+* Large Language Models (LLMs)
+* NLP
+* AI Automation
+* Generative AI
+* Intelligent Information Systems
+
+---
+
+⭐ If you found this project useful, don't forget to give it a star!
+
 
 <!-- Produce a concise, factual milestone for each cluster, with metadata: canonical date, confidence, supporting sources, and contradiction notes — without hallucination.
 
