@@ -4,7 +4,12 @@
 
 ############## llm workflow #############
 
-Goal
+The goal of this project was to:
+
+Collect news automatically.
+Remove duplicate information.
+Summarize long articles.
+Present important updates in one place
 
 <!-- Produce a concise, factual milestone for each cluster, with metadata: canonical date, confidence, supporting sources, and contradiction notes — without hallucination.
 
